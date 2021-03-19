@@ -1,0 +1,21 @@
+{
+    "name": "claudia",
+    "description": "Claudia Theme for Ghost by Skyfallen.",
+    "version": "1.0.0",
+    "engines": {
+        "ghost":">=3.0.0"
+    },
+    "keywords": [
+        "ghost-theme",
+        "skyfallen",
+        "modern",
+        "bulma-css"
+    ],
+    "author": {
+        "name": "Skyfallen",
+        "email": "hello@theskyfallen.com"
+    },
+    "config": {
+        "posts_per_page":4
+    }
+}
