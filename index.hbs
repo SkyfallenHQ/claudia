@@ -1,0 +1,39 @@
+{{!< default}}
+
+<main class="container" style="margin-top: 50px;">
+
+    {{#is "tag"}}
+        <p class="title">{{tag.name}}</p>
+    {{/is}}
+
+    {{#is "author"}}
+    <div style="margin-bottom: 40px;">
+    <div class="media">
+    {{#if author.profile_image}}
+    <div class="media-left">
+        <figure class="image is-48x48">
+            <img class="is-rounded" src="{{author.profile_image}}">
+        </figure>
+    </div>
+    {{/if}}
+    <div class="media-content">
+        <p class="title is-4">{{author.name}}</p>
+        <p class="subtitle is-6">{{author.location}}</p>
+    </div>
+    <p>{{author.bio}}</p>
+    </div>
+    </div>
+    {{/is}}
+    <div class="columns is-multiline">
+        {{#foreach posts}}
+            <div class="column is-half is-centered" onclick="window.location.href='{{url}}'" style="cursor: pointer;">
+                {{> post_card}}
+            </div>
+        {{/foreach}}
+    </div>
+    </div>
+
+</main>
+
+{{pagination}}
+
