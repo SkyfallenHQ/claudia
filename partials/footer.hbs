@@ -1,0 +1,17 @@
+<footer class="footer is-centered">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+            <p class="subtitle is-6">&copy; {{date format="YYYY"}} {{@site.title}}, Published with Claudia theme by Skyfallen.</p>
+        </div>
+        <div class="column">
+            <p class="subtitle is-6">Recent Posts:</p>
+            {{#get "posts" limit=5 include="url" as |post|}}
+                {{#post}}
+                    <a href="{{url}}">{{title}}</a><br>
+                {{/post}}
+            {{/get}}
+        </div>
+        </div>
+    </div>
+</footer>
