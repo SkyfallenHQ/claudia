@@ -1,0 +1,48 @@
+{{!< default}}
+
+<link rel="stylesheet" type="text/css" href="{{asset "css/article.css"}}" />
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+{{#post}}
+    <article class="container" style="margin-top: 100px; max-width: 700px; padding: 20px;">
+        <header style="padding: 0;">
+            <div class="media">
+            <div class="media-content">
+                <p class="title is-4">{{title}}</p>
+                <p class="subtitle is-6">
+                {{#foreach tags}}
+                    <a href="{{url}}">#{{name}}</a>
+                {{/foreach}}
+                </p>
+            </div>
+            </div>
+            {{#is "post"}}
+            <div class="media">
+            {{#if primary_author.profile_image}}
+                <div class="media-left">
+                    <figure class="image is-48x48">
+                        <img class="is-rounded" src="{{primary_author.profile_image}}">
+                    </figure>
+                </div>
+            {{/if}}
+            <div class="media-content">
+                <p class="title is-6"><a href="{{primary_author.url}}">@{{primary_author.name}}</a></p>
+                <p class="subtitle is-6">
+                {{date}}
+                </p>
+            </div>
+            </div>
+            {{/is}}
+            {{#if feature_image}}
+                <img src="{{feature_image}}" style="margin-top: 30px;">
+            {{/if}}
+        </header>
+        <section style="margin-top: 30px; margin-bottom: 150px;">
+            {{content}}
+        </section>
+    </article>
+
+{{/post}}
