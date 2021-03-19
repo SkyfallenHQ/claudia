@@ -1,0 +1,11 @@
+<nav class="pagination is-small is-rounded" role="navigation" aria-label="pagination">
+    <div class="container" style="margin-top: 50px;">
+        {{#if prev}}
+        <a href="{{page_url prev}}" class="pagination-next">Newer Posts</a>
+        {{/if}}
+        <span class="pagination-link is-current">Page {{page}} of {{pages}}</span>
+        {{#if next}}
+            <a href="{{page_url next}}" class="pagination-previous">Older Posts</a>
+        {{/if}}
+    </div>
+</nav>
