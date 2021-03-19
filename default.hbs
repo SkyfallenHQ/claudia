@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+ ____  _           __       _ _            
+/ ___|| | ___   _ / _| __ _| | | ___ _ __  
+\___ \| |/ / | | | |_ / _` | | |/ _ \ '_ \ 
+ ___) |   <| |_| |  _| (_| | | |  __/ | | |
+|____/|_|\_\\__, |_|  \__,_|_|_|\___|_| |_|
+            |___/       
+Claudia Theme for Ghost CMS.
+Feb 14, 2021 - Version 1.0.0              
+-->
+<html lang="{{@site.locale}}">
+<head>
+    <title>{{meta_title}}</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="{{asset "js/main.js"}}"></script>
+    {{ghost_head}}
+</head>
+<body>
+
+    <!-- Header -->
+
+    {{> header}}
+
+    <!-- Body -->
+
+    {{{body}}}
+
+    <!-- Footer -->
+
+    {{> footer}}
+
+    {{ghost_foot}}
+
+
+</body>
+</html>
