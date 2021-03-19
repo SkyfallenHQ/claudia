@@ -1,0 +1,17 @@
+{{!< default}}
+
+<section class="section is-medium">
+<div class="container">
+    <div class="columns is-vcentered">
+    <div class="column has-text-centered">
+        <h1 class="title">{{statusCode}}</h1>
+        <p class="subtitle">{{message}} </p>
+        <a class="button" href="{{@site.url}}">Home</a>
+        <a class="button" href="javascript:history.back()">Go Back</a>
+    </div>
+    <div class="column has-text-centered">
+        <img src="{{asset "image/404_image.png"}}" />
+    </div>
+    </div>
+</div>
+</section>
