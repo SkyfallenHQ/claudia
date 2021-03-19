@@ -1,0 +1,13 @@
+<header class="hero" style="background-color: var(--ghost-accent-color);background-position: center;background-size: cover; background-repeat: no-repeat; {{#if @site.cover_image}} background: url('{{@site.cover_image}}'); {{/if}}">
+
+    <div class="hero-head">
+        {{navigation}}
+    </div>
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">{{@site.title}}</h1>
+            <h2 class="subtitle">{{@site.description}}</h2>
+        </div>
+    </div>
+
+</header>
